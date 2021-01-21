@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block head %}
+    Crear usuario
+    <a href="/">Home</a>
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('create_oferta') }}" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="emp_id">Empresa</label>
+                    <select id="emp_id" name="emp_id">
+                    {% for x in data %}
+                    <option value="{{ x[0] }}">{{ x[1] }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="desc">Descripcion</label>
+                    <input type="text" class="form-control" id="desc" name="desc" placeholder="">
+                </div>
+                <div class="col">
+                    <label for="area">Area de trabajo</label>
+                    <input type="text" class="form-control" id="area" name="area" placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cargo">Cargo Requerido</label>
+            <input type="text" class="form-control" id="cargo" name="cargo" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="jornada">Jornada</label>
+            <input type="text" class="form-control" id="jornada" name="jornada" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="sueldo">Sueldo</label>
+            <input type="text" class="form-control" id="sueldo" name="sueldo" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="beneficios">Beneficios</label>
+            <input type="text" class="form-control" id="beneficios" name="beneficios" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="carrera">Carrera Requerida</label>
+            <input type="text" class="form-control" id="carrera" name="carrera" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exp">Experiencia Laboral Requerida</label>
+            <input type="text" class="form-control" id="exp" name="exp" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="idiomas">Idiomas requeridos</label>
+            <input type="text" class="form-control" id="idiomas" name="idiomas" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="otros">Otros requerimientos</label>
+            <input type="text" class="form-control" id="otros" name="otros" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{% for data in userdata %}
+<img src="{{url_for('static', filename='missing.png')}}" alt="missing" width="250" height="300" class="img-thumbnail">
+<dl class="row">
+
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <td><dt class="col-sm-3">Empresa</dt></td>
+      <td><dd class="col-sm-9"> {{data[0]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Nombre del reclutador</dt></td>
+      <td><dd class="col-sm-9"></dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Cargo administrativo</dt></td>
+      <td><dd class="col-sm-9">{{data[1]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Fecha de publicación</dt></td>
+      <td><dd class="col-sm-9">{{data[3]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Descripción</dt></td>
+      <td><dd class="col-sm-9">{{data[4]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Área de trabajo</dt></td>
+      <td><dd class="col-sm-9">{{data[5]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Jornada</dt></td>
+      <td><dd class="col-sm-9">{{data[6]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Sueldo</dt></td>
+      <td><dd class="col-sm-9">{{data[7]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Beneficios</dt></td>
+      <td><dd class="col-sm-9"> {{data[8]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Carrera requerida</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">{{data[9]}}</dt></dd>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Experiencia laboral requerida</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">{{data[10]}}</dt></dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Idiomas requeridos</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">{{data[11]}}</dt></dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Otros requerimientos</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">{{data[12]}}</dt></dd></td>
+    </tr>
+  </tbody>
+</table>
+  <button type="submit" class="btn btn-primary btn-block" value="submit">Guardar Oferta</button>
+  <a href="/home=">  Home</a>
+  {% endfor %}
+{% endblock %}

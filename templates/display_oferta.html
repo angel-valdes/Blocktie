@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<img src="{{url_for('static', filename='missing.png')}}" alt="missing" width="250" height="300" class="img-thumbnail">
+<dl class="row">
+
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <td><dt class="col-sm-3">Nombre</dt></td>
+      <td><dd class="col-sm-9">{{userdata[0]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Email</dt></td>
+      <td><dd class="col-sm-9"> {{userdata[1]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Sexo</dt></td>
+      <td><dd class="col-sm-9">{{userdata[2]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Aptitudes</dt></td>
+      <td><dd class="col-sm-9">{{userdata[3]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Logros</dt></td>
+      <td><dd class="col-sm-9">{{userdata[4]}}</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Títulos y menciones</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">{{userdata[5]}}, {{userdata[6]}}, {{userdata[7]}}, {{userdata[8]}}</dt> </dd></td>
+    </tr>
+
+
+  </tbody>
+</table>
+  <button type="submit" class="btn btn-primary btn-block" value="submit">Guardar Oferta</button>
+  <a href="/home">  Home</a>
+{% endblock %}

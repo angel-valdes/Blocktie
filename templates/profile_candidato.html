@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block head %}
+    Crear usuario
+    <a href="/">Home</a>
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('profile_candidato') }}" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="{{ data[0] }}">
+                </div>
+                <div class="col">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="{{ data[1] }}">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="contraseña">contraseña</label>
+                    <input type="text" class="form-control" id="pass" name="pass" placeholder="{{ data[2] }}">
+                </div>
+                <div class="col">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="{{ data[5] }}">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Universidad">Universidad</label>
+            <input type="text" class="form-control" id="university" name="university" placeholder="{{ data[8] }}">
+        </div>
+        <div class="form-group">
+            <label for="Título">Título</label>
+            <input type="text" class="form-control" id="degree" name="degree" placeholder="{{ data[13] }}">
+        </div>
+        <div class="form-group">
+            <label for="Minor">Minor</label>
+            <input type="text" class="form-control" id="minor" name="minor" aria-describedby="minorInfo" placeholder="{{ data[14] }}">
+            <small id="minorInfo" class="form-text text-muted">En caso de no tener Minor, ingrese "N/A" (sin comillas).</small>
+        </div>
+        <div class="form-group">
+            <label for="Aptitudes">Aptitudes</label>
+            <input type="text" class="form-control" id="apt" name="apt" placeholder="{{ data[9] }}">
+        </div>
+        <div class="form-group">
+            <label for="Logros">Logros</label>
+            <input type="text" class="form-control" id="ach" name="ach" placeholder="{{ data[10] }}">
+        </div>
+        <div class="form-group">
+            <label for="Experiencia Laboral">Experiencia Laboral</label>
+            <input type="text" class="form-control" id="exp" name="exp" placeholder="{{ data[11] }}">
+        </div>
+        <div class="form-group">
+            <label for="Aptitudes">Extras</label>
+            <input type="text" class="form-control" id="extra" name="extra" placeholder="{{ data[12] }}">
+        </div>
+        <div class="form-group">
+            <label for="Teléfono">Teléfono</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="{{ data[3] }}">
+        </div>
+        <div class="form-group">
+            <label for="dirección">dirección</label>
+            <input type="text" class="form-control" id="adress" name="adress" placeholder="{{ data[6] }}">
+        </div>
+        <div class="form-group">
+            <label for="nacimiento">nacimiento</label>
+            <input type="text" class="form-control" id="birth" name="birth" placeholder="{{ data[4] }}">
+        </div>
+        <div class="form-group">
+            <label for="sexo">sexo</label>
+            <input type="text" class="form-control" id="sex" name="sex" placeholder="{{ data[7] }}">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

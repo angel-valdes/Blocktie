@@ -1,0 +1,9 @@
+body{
+    background-image: url("1.jpg");
+}
+.form-container{
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Kaleido Connection</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Enter your minor</h1>
+<div class="content">
+    <form action="/store_minor" method="POST">
+        <label for="content">Minor:</label>
+        <input type="text" id="content" name="content"><br><br>
+        <input type="submit" value="submit">
+    </form>
+</div>
+{% endblock %}

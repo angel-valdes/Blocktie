@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rut {{g.user}}</title>
+{% endblock %}
+
+{% block body %}
+    <b1>Bienvenido</b1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="search" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Buscar ofertas</a>
+            </div>
+            <div class="col">
+                <a href="favorite_ofertas" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ver Ofertas Guardadas</a>
+            </div>
+            <div class="col">
+                <a href="perfil" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar Perfil</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

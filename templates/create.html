@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block head %}
+    Crear usuario
+    <a href="/">Home</a>
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('create') }}" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre">
+                </div>
+                <div class="col">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Título">Título</label>
+            <input type="text" class="form-control" id="degree" name="degree" placeholder="Título">
+        </div>
+        <div class="form-group">
+            <label for="Minor">Minor</label>
+            <input type="text" class="form-control" id="minor" name="minor" aria-describedby="minorInfo" placeholder="Minor">
+            <small id="minorInfo" class="form-text text-muted">En caso de no tener Minor, ingrese "N/A" (sin comillas).</small>
+        </div>
+        <div class="form-group">
+            <label for="Teléfono">Teléfono</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Teléfono">
+        </div>
+        <div class="form-group">
+            <label for="Universidad">Universidad</label>
+            <input type="text" class="form-control" id="school" name="school" placeholder="Universidad">
+        </div>
+        <div class="form-group">
+            <label for="Graduación">Graduación</label>
+            <input type="text" class="form-control" id="graduation" name="graduation" placeholder="Graduación">
+        </div>
+        <div class="form-group">
+            <label for="Edad">Edad</label>
+            <input type="text" class="form-control" id="age" name="age" placeholder="Edad">
+        </div>
+        <div class="form-group">
+            <label for="Información Adicional">Información Adicional</label>
+            <textarea class="form-control" id="extras" name="extras" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

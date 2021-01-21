@@ -1,0 +1,16 @@
+{% extends base.html %}
+
+{% block head %}
+<title>Retrieve - Kaleido Connection</title>
+{% endblock head %}
+
+{% block body %}
+    <form action="/retrieve/{{ attribute }}" method="POST">
+    <select name="attribute" id="attribute">
+    {% for val in options %}
+        <option value="{{ val }}">{{ val }}</option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Send Request">
+    </form>
+{% endblock body %}

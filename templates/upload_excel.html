@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('upload_excel') }}" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="Nombre">Subir Archivo</label>
+                    
+                    <input type=file name=file>
+                    <input type=submit value=Upload>
+    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

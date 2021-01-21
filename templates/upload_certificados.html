@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('upload_certificados') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="Nombre">Subir Archivo</label>
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <input type=file id="file" name=file>
+    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block head %}
+    Display User
+    <a href="/">Home</a>
+{% endblock %}
+{% block body %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Empresa</th>
+      <th scope="col">Nombre Reclutador</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Fecha de publicacion</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Area de trabajo</th>
+      <th scope="col">Jornada</th>
+      <th scope="col">Sueldo</th>
+      <th scope="col">Beneficios</th>
+      <th scope="col">Carrera requerida</th>
+      <th scope="col">Experiencia laboral requerida</th>
+      <th scope="col">Idiomas requeridos</th>
+      <th scope="col">Otros requerimientos</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in userdata %}
+        <tr>
+           <th scope="row">{{ x[0] }}</th>
+           <td>{{ x[1] }}</td>
+           <td>{{ x[2] }}</td>
+           <td>{{ x[3] }}</td>
+           <td>{{ x[4] }}</td>
+           <td>{{ x[5] }}</td>
+           <td>{{ x[6] }}</td>
+           <td>{{ x[7] }}</td>
+           <td>{{ x[8] }}</td>
+           <td>{{ x[9] }}</td>
+           <td>{{ x[10] }}</td>
+           <td>{{ x[11] }}</td>
+           <td>{{ x[12] }}</td>
+           <td class="Button" onclick="location.href='delete_oferta?id={{ x[13] }}'">Borrar</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

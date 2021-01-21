@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head %}
+    Intermediate Read
+    <a href="/">Home</a>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <form action="{{ url_for('read') }}" method="POST">
+            <div class="form-group">
+                <label for="Instancia">Instancia de contrato</label>
+                <input type="text" class="form-control" id="contractInstance" name="contractInstance" placeholder="Instancia">
+            </div>
+            <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ID {{g.user}}</title>
+{% endblock %}
+
+{% block body %}
+    <b1>Bienvenido</b1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="search">Buscar Ofertas</a>
+            </div>
+            <div class="col">
+                <a href="favorite_ofertas">Ver Ofertas Guardadas</a>
+            </div>
+            <div class="col">
+                <a href="profile_candidato">Editar Perfil</a>
+            </div>
+            <div class="col">
+                <a href="get_certificado">Validar certificado</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

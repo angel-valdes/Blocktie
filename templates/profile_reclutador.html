@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block head %}
+    Crear usuario
+    <a href="/">Home</a>
+{% endblock %}
+
+{%  block body %}
+    <div class="container">
+    <form action="{{ url_for('profile_reclutador') }}" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre">
+                </div>
+                <div class="col">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="contraseña">contraseña</label>
+                    <input type="text" class="form-control" id="pass" name="pass" placeholder="contraseña">
+                </div>
+                <div class="col">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="email">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Empresa">Empresa</label>
+            <input type="text" class="form-control" id="emp" name="emp" placeholder="Empresa">
+        </div>
+        <div class="form-group">
+            <label for="Industria">Industria</label>
+            <input type="text" class="form-control" id="ind" name="ind" placeholder="Industria">
+        </div>
+        <div class="form-group">
+            <label for="Cargo">Cargo</label>
+            <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Cargo">     
+        </div>
+        <div class="form-group">
+            <label for="Direccion Empresa">Direccion Empresa</label>
+            <input type="text" class="form-control" id="adr" name="adr" placeholder="Direccion Empresa">
+        </div>
+        <div class="form-group">
+            <label for="Web URL">Web URL</label>
+            <input type="text" class="form-control" id="web" name="web" placeholder="www.example.com">
+        </div>
+        <div class="form-group">
+            <label for="Descripcion Empresa">Descripcion Empresa</label>
+            <input type="text" class="form-control" id="desc" name="desc" placeholder="Descripcion Empresa">
+        </div>
+        <div class="form-group">
+            <label for="Teléfono">Teléfono</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Teléfono">
+        </div>
+        <div class="form-group">
+            <label for="dirección">dirección</label>
+            <input type="text" class="form-control" id="adress" name="adress" placeholder="dirección">
+        </div>
+        <div class="form-group">
+            <label for="nacimiento">nacimiento</label>
+            <input type="text" class="form-control" id="birth" name="birth" placeholder="nacimiento">
+        </div>
+        <div class="form-group">
+            <label for="sexo">sexo</label>
+            <input type="text" class="form-control" id="sex" name="sex" placeholder="sexo">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

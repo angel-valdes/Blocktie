@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ID {{g.user}}</title>
+{% endblock %}
+
+{% block body %}
+<body style="background:url({{'static/gris.jpg'}});">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="create_oferta">Crear oferta</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="manage_ofertas">Ver ofertas creadas y candidatos <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="search_candidatos">Buscar candidatos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="list_candidatos">lista candidatos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="perfil">Editar Perfil</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container"></div>
+  <div class="row">
+    {% for data in userdata %}
+    <div class="card m-5 pb-5" style="width: 18rem;">
+        <img src="{{url_for('static', filename='missing.png')}}" alt="missing" class="card-img-top">
+        <div class="card-body ">
+          <h5 class="card-title">{{data[1]}}</h5>
+          <p class="card-text">{{data[0]}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{data[6]}}</li>
+          <li class="list-group-item">{{data[7]}}</li>
+          <li class="list-group-item">Blocktie</li>
+        </ul>
+        <div class="card-body">
+          <form action="{{ url_for('display_oferta') }}" method="POST" ><button class="btn btn-danger" type="submit" name="id_tarjeta" value="{{data[0]}}"><span class="glyphicon glyphicon-trash"></span>link</button> </form>
+
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

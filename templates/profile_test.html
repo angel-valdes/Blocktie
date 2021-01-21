@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block head %}
+<a href="/">Home</a>
+<!--
+<div class="container">
+        <div class="col">
+        {% for data in userdata %}
+            <div class="row">
+                <h1>{{ data }}</h1>
+            </div>
+        {% endfor %}
+		</div>
+    </div>
+    <a href="/">Home</a>
+    -->
+{% endblock %}
+{% block body %}
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="style.css" >
+	<!------ Include the above in your HEAD tag ---------->
+
+	<!--
+	-->
+
+
+	<div class="container">
+		<div class="row profile">
+			<div class="col-md-3">
+				<div class="profile-sidebar">
+					<!-- SIDEBAR USERPIC -->
+					<div class="profile-userpic">
+						<img src="https://static.change.org/profile-img/default-user-profile.svg" class="img-responsive" alt="">
+					</div>
+					<!-- END SIDEBAR USERPIC -->
+					<!-- SIDEBAR USER TITLE -->
+					<div class="profile-usertitle">
+						<div class="profile-usertitle-name">
+							José Manuel Corvalán
+						</div>
+						<div class="profile-usertitle-job">
+							Developer
+						</div>
+					</div>
+					<!-- END SIDEBAR USER TITLE -->
+					<!-- SIDEBAR BUTTONS -->
+					<div class="profile-userbuttons">
+						<button type="button" class="btn btn-success btn-sm">Follow</button>
+						<button type="button" class="btn btn-danger btn-sm">Message</button>
+					</div>
+					<!-- END SIDEBAR BUTTONS -->
+					<!-- SIDEBAR MENU -->
+					<div class="profile-usermenu">
+						<ul class="nav">
+							<li class="active">
+								<a href="#">
+								<i class="glyphicon glyphicon-home"></i>
+								Overview </a>
+							</li>
+							<li>
+								<a href="#">
+								<i class="glyphicon glyphicon-user"></i>
+								Account Settings </a>
+							</li>
+							<li>
+								<a href="#" target="_blank">
+								<i class="glyphicon glyphicon-ok"></i>
+								Tasks </a>
+							</li>
+							<li>
+								<a href="#">
+								<i class="glyphicon glyphicon-flag"></i>
+								Help </a>
+							</li>
+						</ul>
+					</div>
+					<!-- END MENU -->
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="profile-content">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<a href="/Edit_perfil">Edit</a>
+					<br>
+					<br>
+					<br>
+				   <div class="container">
+					  <div class="row">
+						  <label for="Nombre">Nombre</label>
+							<div class="col-sm">
+							<font size="-1"> <br> {{ userdata[0][1] }} </font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Apellido">Apellido</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][2] }}</font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Contraseña">Contraseña</label>
+							<div class="col-sm">
+								<font size="-1"><br> </font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="telefono">teléfono</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][4] }}</font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Nacimiento">Nacimiento</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][5] }}</font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Email">Email</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][6] }}</font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Dirección">Dirección</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][7] }}</font>
+							</div>
+					  </div>
+				   </div>
+					<div class="container">
+					  <div class="row">
+						  <label for="Sexo">Sexo</label>
+							<div class="col-sm">
+								<font size="-1"><br> {{ userdata[0][8] }}</font>
+							</div>
+					  </div>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<br>
+<br>
+<br>
+<br>
+	<center>
+	<strong>Blocktie <a href="" target="_blank"></a></strong>
+	</center>
+	<br>
+{% endblock %}

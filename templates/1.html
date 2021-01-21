@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<img src="{{url_for('static', filename='missing.png')}}" alt="missing" width="250" height="300" class="img-thumbnail">
+<dl class="row">
+
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <td><dt class="col-sm-3">Empresa</dt></td>
+      <td><dd class="col-sm-9"> Perfil Market</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Nombre del reclutador</dt></td>
+      <td><dd class="col-sm-9"> Jaime Valorant.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Cargo administrativo</dt></td>
+      <td><dd class="col-sm-9">Analista de datos</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Fecha de publicación</dt></td>
+      <td><dd class="col-sm-9">11/15/2020</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Descripción</dt></td>
+      <td><dd class="col-sm-9">Se busca analista Laboratorio de Neurología, para hacer análisis estadísticos y pronósticos en base a datos recopilados.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Área de trabajo</dt></td>
+      <td><dd class="col-sm-9">Investigación, tecnología de la información.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Jornada</dt></td>
+      <td><dd class="col-sm-9"> Jornada lunes a viernes full-time.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Sueldo</dt></td>
+      <td><dd class="col-sm-9">Contactar para información.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Beneficios</dt></td>
+      <td><dd class="col-sm-9"> Posibilidad de trabajar de manera Online.</dd></td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Carrera requerida</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">Ingeniería Civil Industrial, Ingeniería informática.</dt></dd>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Experiencia laboral requerida</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">2 años o más en el rubro.</dt></dd>
+      </td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Idiomas requeridos</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">Español e Inglés basico.</dt></dd>
+      </td>
+    </tr>
+    <tr>
+      <td><dt class="col-sm-3">Otros requerimientos</dt></td>
+      <td><dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">Programación en c++, minería de datos, python.</dt></dd>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  <button type="submit" class="btn btn-primary btn-block" value="submit">Guardar Oferta</button>
+  <a href="/home=">  Home</a>
+
+{% endblock %}

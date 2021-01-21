@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head %}
+    Display User
+    <a href="/">Home</a>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="col">
+        {% for data in userdata[0] %}
+            <div class="row">
+                <h1>{{ data }}</h1>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
